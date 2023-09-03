@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\WebApplication-and-Builder-Minimal-API.props" />
+</Project>
