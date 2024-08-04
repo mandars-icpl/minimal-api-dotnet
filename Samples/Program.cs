@@ -26,13 +26,12 @@ if (app.Environment.IsDevelopment())
 app.MapGet("/user", async (LiteDbContext dbContext) =>
 {
     var user = dbContext.User.FindAll();
-    return Results.Ok(user);
+    return Results.Ok("Get method user");
 });
 
 app.MapPost("/user", async (LiteDbContext dbContext, User newUser) =>
 {
-    dbContext.User.Insert(newUser);
-    return Results.Created($"/user/{newUser.Id}",newUser);
+    return Results.Ok("Postmethod user");
 });
 
 
